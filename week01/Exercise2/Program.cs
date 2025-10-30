@@ -9,21 +9,42 @@ class Program
 
     {
         Console.WriteLine("What is your grade percentage (without the percentage sign)? ");
-    
-        if (grade >= 90)
-            Console.WriteLine("A");
-        else if (grade >= 80)
-            Console.WriteLine("B");
-        else if (grade >= 70)
-            Console.WriteLine("C");
-        else if (grade >= 60)
-            Console.WriteLine("D");
-        else:
-            Console.WriteLine("F");
+        string answer = Console.ReadLine();
+        int percent = int.Parse(answer);
 
-        sign = ""
-            last_digit = grade % 10
+        string letter = "";
+
+        if (grade >= 90)
+        {
+            Console.WriteLine("A");
+        }
+        else if (grade >= 80)
+        {
+            Console.WriteLine("B");
+        }
+        else if (grade >= 70)
+        {
+            Console.WriteLine("C");
+        }
+        else if (grade >= 60)
+        {
+            Console.WriteLine("D");
+        }
+        else:
+        {
+            Console.WriteLine("F");
+        }
     
-    
+        Console.WriteLine($"Your grade is: {letter}");
+
+        if (percent is >= 70)
+        {
+            Console.WriteLine("You Passed.");
+        }
+
+        else 
+        {
+            Console.WriteLine("Better luck next time.");
+        }
     }
 }
