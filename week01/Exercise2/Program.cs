@@ -3,16 +3,15 @@ using System;
 class Program
 {
     static void Main(string[] args)
+
     {
         Console.WriteLine("Hello World! This is the Exercise2 Project.");
-    }
 
-    {
+    
         Console.WriteLine("What is your grade percentage (without the percentage sign)? ");
         string answer = Console.ReadLine();
-        int percent = int.Parse(answer);
+        int grade = int.Parse(answer);
 
-        string letter = "";
 
         if (grade >= 90)
         {
@@ -30,14 +29,14 @@ class Program
         {
             Console.WriteLine("D");
         }
-        else:
+        else
         {
             Console.WriteLine("F");
         }
     
-        Console.WriteLine($"Your grade is: {letter}");
+        Console.WriteLine($"Your grade is: {grade}");
 
-        if (percent is >= 70)
+        if (grade is >= 70)
         {
             Console.WriteLine("You Passed.");
         }
