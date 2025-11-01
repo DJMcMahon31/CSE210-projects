@@ -13,9 +13,9 @@ class Program
         string userName = PromptUserName();
         int favNumber = PromptFavNumber();
 
-        double squareRoot = CalculateSquareRoot(favNumber);
+        double square = CalculateSquare(favNumber);
 
-        DisplayResult(userName, squareRoot);
+        DisplayResult(userName, square);
     }
         
     static void DisplayMessage()
@@ -40,13 +40,14 @@ class Program
         return favNumber;
     }
 
-    static double CalculateSquareRoot(int favNumber)
+    static double CalculateSquare(int number)
     {
-        return Math.Sqrt(favNumber);
+        return number * number;
     }
-
-    static void DisplayResult(string userName, double squareRoot)
-    {
-        Console.WriteLine($"{userName}, the square root of your favourite number is {squareRoot:F2}");
+    
+    static void DisplayResult(string userName, double square)
+    {    
+        Console.WriteLine($"{userName}, the square of your number is {square}");
+        
     }
 }
