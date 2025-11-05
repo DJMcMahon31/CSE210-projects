@@ -3,9 +3,14 @@ using System.Security.AccessControl;
 using System.Security.Cryptography.X509Certificates;
 using System;
 
-public class Resumes
+public class Resume
 
 {
+    /*public string _name;
+    _jobs:List<Job>
+    Display():void
+    */
+
     public string _name;
     public List<Job> _job = new List<Job>();
 
