@@ -26,21 +26,55 @@ class Program
         {
             //string getPromptGenerator = promptGen.GetRandomPrompt();
             Console.WriteLine(promptGen.GetRandomPrompt());
+            string userEntry = Console.ReadLine();
+
+            string entryText = "user_entry.txt";
+            
+            Console.WriteLine($"Message saved to {entryText}");
+
+
         }
 
-        if (option == "2")
+        else if (option == "2")
         {
             myJournal.DisplayAll();
+
+            string filePath = "userText.txt";
+
+            try
+            {
+                string[] lines = userText.txt;
+                foreach (string line in lines)
+                {
+                    Console.WriteLine(line); //for console applications
+
+                }
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine("An error occurred while reading the file.");
+            }
+
+
+            Console.WriteLine();
         }
 
-        if (option == "3")
+        else if (option == "3")
         {
             Console.WriteLine("Save to file option selected.");
         }
-        
 
+        else if (option == "4")
+        {
+            Console.WriteLine("Load from file option selected.");
+        }
 
+        else if (option == "5")
+        {
+            Console.WriteLine("Quit option selected.");
+        }
 
+        Console.WriteLine ("Thank you for using the Journal Program. Goodbye!"); 
         
     }   
 }
