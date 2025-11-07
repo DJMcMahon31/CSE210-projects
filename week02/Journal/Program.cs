@@ -18,7 +18,9 @@ class Program
         Console.WriteLine("4.Load the Journal from a file");
         Console.WriteLine("5.Quit");
 
-       
+    while (true)
+
+
         Console.WriteLine("Choose an option number: ");
         string option = Console.ReadLine();
 
@@ -29,7 +31,7 @@ class Program
             string userEntry = Console.ReadLine();
 
             string entryText = "user_entry.txt";
-            
+
             Console.WriteLine($"Message saved to {entryText}");
 
 
@@ -38,25 +40,6 @@ class Program
         else if (option == "2")
         {
             myJournal.DisplayAll();
-
-            string filePath = "userText.txt";
-
-            try
-            {
-                string[] lines = userText.txt;
-                foreach (string line in lines)
-                {
-                    Console.WriteLine(line); //for console applications
-
-                }
-            }
-            catch (System.Exception)
-            {
-                Console.WriteLine("An error occurred while reading the file.");
-            }
-
-
-            Console.WriteLine();
         }
 
         else if (option == "3")
@@ -71,10 +54,10 @@ class Program
 
         else if (option == "5")
         {
-            Console.WriteLine("Quit option selected.");
+            Console.WriteLine("Exiting program. Goodbye!");
         }
 
-        Console.WriteLine ("Thank you for using the Journal Program. Goodbye!"); 
+        Console.WriteLine ("Selection invalid. Please choose a valid option."); 
         
     }   
 }
