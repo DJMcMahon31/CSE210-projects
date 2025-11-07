@@ -13,10 +13,10 @@ class Program
         Entry newEntry = new Entry();
 
         Console.WriteLine("1.New Journal Entry");
-        Console.WriteLine("3.Display the Journal");
-        Console.WriteLine("4.Save the Journal to a file");
-        Console.WriteLine("5.Load the Journal from a file");
-        Console.WriteLine("6.Quit");
+        Console.WriteLine("2.Display the Journal");
+        Console.WriteLine("3.Save the Journal to a file");
+        Console.WriteLine("4.Load the Journal from a file");
+        Console.WriteLine("5.Quit");
 
        
         Console.WriteLine("Choose an option number: ");
