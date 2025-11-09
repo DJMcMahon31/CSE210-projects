@@ -15,7 +15,7 @@ public class Fraction
         Numerator = numerator;
         Denominator = 1;
     }
-   
+
 
     public Fraction(int numerator, int denominator)
     {
@@ -23,4 +23,8 @@ public class Fraction
         Denominator = denominator;
     }
 
+    public override string ToString()
+    {
+        return $"{Numerator}/{Denominator}";
+    }
 }
