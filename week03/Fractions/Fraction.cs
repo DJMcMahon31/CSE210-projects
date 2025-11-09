@@ -1,25 +1,26 @@
 using System;
 public class Fraction
 {
-    private int _top;
-    private int _bottom;
+    public int Numerator { get; set; }
+    public int Denominator { get; set; }
 
     public Fraction()
     {
-        _top = 1;
-        _bottom = 1;
+        Numerator = 1;
+        Denominator = 1;
     }
 
-    public Fraction(int top)
+    public Fraction(int numerator)
     {
-        _top = top;
-        _bottom = 1;
+        Numerator = numerator;
+        Denominator = 1;
     }
+   
 
-    public Fraction(int top, int bottom)
+    public Fraction(int numerator, int denominator)
     {
-        _top = top;
-        _bottom = bottom;
+        Numerator = numerator;
+        Denominator = denominator;
     }
 
 }
