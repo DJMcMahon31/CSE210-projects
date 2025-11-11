@@ -23,13 +23,15 @@ public class Fraction
         Denominator = denominator;
     }
 
-    public double ToDecimal()
-    {
-        return (double)Numerator / Denominator;
-    }
-
-    public override string ToString()
+    public string GetFractionString ()
     {
         return $"{Numerator}/{Denominator}";
+    }
+
+    public string GetDecimalString()
+    {
+        double result = (double)Numerator / Denominator;
+        return result.ToString("G");
+        
     }
 }

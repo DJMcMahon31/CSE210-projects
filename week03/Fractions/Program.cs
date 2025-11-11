@@ -30,19 +30,19 @@ class Program
 
         //display the different representations for a few different fractions.
         Fraction fraction5 = new Fraction(1, 1);
-        Console.WriteLine(fraction5.ToString());
-        Console.WriteLine(fraction5.ToDecimal());
+        Console.WriteLine(fraction5.GetFractionString());
+        Console.WriteLine(fraction5.GetDecimalString());
 
         Fraction fraction6 = new Fraction(5, 1);
-        Console.WriteLine(fraction6.ToString());
-        Console.WriteLine(fraction6.ToDecimal());
+        Console.WriteLine(fraction6.GetFractionString());
+        Console.WriteLine(fraction6.GetDecimalString());
 
         Fraction fraction7 = new Fraction(3, 4);
-        Console.WriteLine(fraction7.ToString());
-        Console.WriteLine(fraction7.ToDecimal());
+        Console.WriteLine(fraction7.GetFractionString());
+        Console.WriteLine(fraction7.GetDecimalString());
 
         Fraction fraction8 = new Fraction(1, 3);
-        Console.WriteLine(fraction8.ToString());
-        Console.WriteLine(fraction8.ToDecimal());
+        Console.WriteLine(fraction8.GetFractionString());
+        Console.WriteLine(fraction8.GetDecimalString());
     }
 }
