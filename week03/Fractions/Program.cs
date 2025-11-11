@@ -6,6 +6,7 @@ class Program
     {
         //Console.WriteLine("Hello World! This is the Fractions Project.");
 
+        /*
         //create an instance of the first constructor (1/1)
         Fraction fraction1 = new Fraction();
         Console.WriteLine($"Fraction 1: {fraction1}");
@@ -19,10 +20,29 @@ class Program
         Console.WriteLine($"Fraction 3: {fraction3}");
 
         //create a method called GetFractionString that returns the fraction in the form 3/4.
-        Fraction fraction4 = new Fraction(3, 4);
-        Console.WriteLine($"Fraction 4: {fraction4.ToString()}");
-        
+        Fraction GetFractionString = new Fraction(3, 4);
+        Console.WriteLine($"Fraction 4: {GetFractionString.ToString()}");
 
+        //create a method called GetDecimalValue that returns a double that is the result of dividing the top number by the bottom number, such as 0.75.
+        double GetDecimalValue = (double)GetFractionString.Numerator / GetFractionString.Denominator;
+        Console.WriteLine($"Decimal Value of Fraction 4: {GetDecimalValue}");
+        */
 
+        //display the different representations for a few different fractions.
+        Fraction fraction5 = new Fraction(1, 1);
+        Console.WriteLine(fraction5.ToString());
+        Console.WriteLine(fraction5.ToDecimal());
+
+        Fraction fraction6 = new Fraction(5, 1);
+        Console.WriteLine(fraction6.ToString());
+        Console.WriteLine(fraction6.ToDecimal());
+
+        Fraction fraction7 = new Fraction(3, 4);
+        Console.WriteLine(fraction7.ToString());
+        Console.WriteLine(fraction7.ToDecimal());
+
+        Fraction fraction8 = new Fraction(1, 3);
+        Console.WriteLine(fraction8.ToString());
+        Console.WriteLine(fraction8.ToDecimal());
     }
 }

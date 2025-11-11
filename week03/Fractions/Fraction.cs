@@ -23,6 +23,11 @@ public class Fraction
         Denominator = denominator;
     }
 
+    public double ToDecimal()
+    {
+        return (double)Numerator / Denominator;
+    }
+
     public override string ToString()
     {
         return $"{Numerator}/{Denominator}";
