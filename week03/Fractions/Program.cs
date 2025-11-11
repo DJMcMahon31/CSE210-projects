@@ -18,6 +18,11 @@ class Program
         Fraction fraction3 = new Fraction(6, 7);
         Console.WriteLine($"Fraction 3: {fraction3}");
 
+        //create a method called GetFractionString that returns the fraction in the form 3/4.
+        Fraction fraction4 = new Fraction(3, 4);
+        Console.WriteLine($"Fraction 4: {fraction4.ToString()}");
+        
+
 
     }
 }
