@@ -1,5 +1,6 @@
 using System;
-public class  Word
+public class Word
 {
-    
+
 }
+//hidden words
