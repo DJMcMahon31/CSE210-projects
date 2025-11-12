@@ -49,11 +49,3 @@ public class Reference
 
 
 
-    
-
-
-//scripture reference
-}
-//John 3:16 //copy and paste it
-//attributes - 
-
