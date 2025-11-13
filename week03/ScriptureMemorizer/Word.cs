@@ -1,6 +1,16 @@
 using System;
 public class Word
 {
+    private string _text;
+    private bool _IsHidden;
+
+    public Word(string text)
+    {
+        _text = text;
+        _IsHidden = false;
+    }
+        
+    
     //static void Main()
 }
 //hidden words
