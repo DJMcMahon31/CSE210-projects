@@ -15,27 +15,13 @@ public class Scripture
         string[] parts = text.Split("");
         foreach (string part in parts)
         {
-
+            _words.Add(new Word(part));
         }
-
-
+    }
         public string GetDisplayText()
         {
-            Console.WriteLine("reference");
-            Console.WriteLine("List<Word>");
+        return _reference.GetDisplayText() + " " + string.Join(" ", _words);
         }
-        /*_words = text.Split("")
-                     .Select(word => new Word())*/
-
-
-
-        /*HideRandomWords(numberToHide:int) : void;
-        GetDisplayText():string;
-        IsCompletelyHidden():bool;
-        */
-    }
-
-
 }
 
 //static void DisplayMessage()
@@ -43,3 +29,11 @@ public class Scripture
 //refer reference class file and word class file
 //data type is going to be the class
 //reference John 3;16();
+
+/*_words = text.Split("")
+                     .Select(word => new Word())*/
+
+        /*HideRandomWords(numberToHide:int) : void;
+        GetDisplayText():string;
+        IsCompletelyHidden():bool;
+        */

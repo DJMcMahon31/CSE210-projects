@@ -12,7 +12,7 @@ public class Word
 
     public void Hide()
     {
-
+        _IsHidden = true;
     }
 
     public void Show()
@@ -22,12 +22,13 @@ public class Word
 
     public bool IsHidden()
     {
-
+        return _IsHidden;
     }
 
     public string GetDisplayText()
     {
         Console.WriteLine("text");
+        return string.Empty;
     }
     
 

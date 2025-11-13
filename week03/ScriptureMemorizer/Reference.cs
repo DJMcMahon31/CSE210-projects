@@ -30,21 +30,16 @@ public class Reference
         Console.WriteLine("chapter");
         Console.WriteLine("firstVerse");
         Console.WriteLine("lastVerse");
+
+        var parts = new List<string>();
+        if (!string.IsNullOrEmpty(_book)) parts.Add(_book);
+        if (_chapter != null) parts.Add(_chapter.ToString());
+        if (!string.IsNullOrEmpty(_firstVerse)) parts.Add(_firstVerse);
+        if (!string.IsNullOrEmpty(_lastVerse)) parts.Add(_lastVerse);
+
+        return string.Join(" ", parts);
     }
-    /*
-    or:
-        public string Display()
-{
-    // Build the reference string
-    if (!string.IsNullOrEmpty(_lastVerse))
-    {
-        return $"{_book} {_chapter}:{_firstVerse}-{_lastVerse}";
-    }
-    else
-    {
-        return $"{_book} {_chapter}:{_firstVerse}";
-    }
-    */
+   
 }
 
 
