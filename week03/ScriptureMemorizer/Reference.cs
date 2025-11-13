@@ -24,7 +24,7 @@ public class Reference
         _firstVerse = firstVerse;
     }
 
-    public void Display()
+    public string GetDisplayText()
     {
         Console.WriteLine("book");
         Console.WriteLine("chapter");

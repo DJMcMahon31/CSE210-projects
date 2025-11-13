@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 public class Scripture
 {
     private Reference _reference;
@@ -12,17 +13,22 @@ public class Scripture
 
         _words = new List<Word>();
         string[] parts = text.Split("");
-        foreach(string part in parts)
+        foreach (string part in parts)
         {
-            
+
         }
 
 
+        public string GetDisplayText()
+        {
+            Console.WriteLine("reference");
+            Console.WriteLine("List<Word>");
+        }
         /*_words = text.Split("")
                      .Select(word => new Word())*/
 
 
-        
+
         /*HideRandomWords(numberToHide:int) : void;
         GetDisplayText():string;
         IsCompletelyHidden():bool;

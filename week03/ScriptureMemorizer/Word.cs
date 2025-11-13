@@ -9,8 +9,29 @@ public class Word
         _text = text;
         _IsHidden = false;
     }
-        
+
+    public void Hide()
+    {
+
+    }
+
+    public void Show()
+    {
+
+    }
+
+    public bool IsHidden()
+    {
+
+    }
+
+    public string GetDisplayText()
+    {
+        Console.WriteLine("text");
+    }
     
+
+
     //static void Main()
 }
 //hidden words
