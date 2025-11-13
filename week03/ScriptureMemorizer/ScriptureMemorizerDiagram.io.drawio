@@ -1,0 +1,57 @@
+<mxfile host="65bd71144e">
+    <diagram id="nPclpaKGorJLbmNrreAo" name="Page-1">
+        <mxGraphModel dx="429" dy="320" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="private _reference: string&lt;div&gt;private _texts: List&amp;lt;Word&amp;gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="110" width="240" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="public Scripture(string reference, string text)&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;public IsCompletelyHidden(): bool&lt;/div&gt;&lt;div&gt;public is HideWords(): void&lt;/div&gt;&lt;div&gt;public GetRenderedText(): string&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="160" width="240" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Scripture" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="80" width="240" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Reference" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="80" width="360" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Scripture Memorizer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="10" width="800" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="2" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="private _book: string&lt;div&gt;private _chapter: int&lt;/div&gt;&lt;div&gt;private _firstVerse: int&lt;/div&gt;&lt;div&gt;private _lastVerse: int&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="110" width="360" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="public Reference(string book, string chapter, string firstVerse)&lt;div&gt;public Reference(string book, string chapter, string lastVerse)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Public GetReference(): string&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="180" width="360" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Word" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="80" width="360" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="private _word: string&lt;div&gt;private _IsHidden: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="110" width="360" height="40" as="geometry"/>
+                </mxCell>
+                <object label="public: Word(string word)&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;public: IsHidden(): bool&lt;/div&gt;&lt;div&gt;public: HideWord(): void&lt;/div&gt;&lt;div&gt;public:GetWord(): string&lt;/div&gt;" id="15">
+                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                        <mxGeometry x="720" y="150" width="360" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <mxCell id="16" value="keeps track of both the reference and th text&lt;div&gt;of the scripture. Can hide words and get the&lt;/div&gt;&lt;div&gt;rendered display of the text.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="320" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="keeps track of the book, chapter, and verse information." style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="320" width="360" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="keeps track of a single word and whether it is shown or hidden." style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="320" width="360" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
