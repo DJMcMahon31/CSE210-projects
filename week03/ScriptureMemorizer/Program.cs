@@ -13,8 +13,14 @@ class Program
         Console.WriteLine("Here is a scripture to memorize.");
         Console.WriteLine(scripture.GetDisplayText(0)); //difficulty set to zero shows the whole thing
 
-        Console.WriteLine("Press Enter to continue.");
-        Console.ReadLine();
+
+        while
+        {
+            
+
+            Console.WriteLine("Press Enter to continue.");
+            Console.ReadLine();
+        }
 
         Console.Clear();
         Console.WriteLine(scripture.GetDisplayText(5));

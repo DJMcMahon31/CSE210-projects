@@ -20,10 +20,22 @@ public class Scripture
     }
     public void GetDisplayText()
     {
+        return $"{_reference}: " + string.Join(" ", _words.Select(w => w.GetDisplayText()));
+      
+        
+    }
+
+    public bool IsCompletelyHidden()
+    {
+         return _words.All(w = w.IsHidden); 
+    }
+
+    public void HideRandomWords(int count)
+    {
         Random rng = new Random();
-        foreach (Word w in _words)
+          foreach (Word w in _words)
         {
-            if (rng.Next(1, 100) > difficulty)
+            if (rng.Next(1, _words.Count) > difficulty)
             {
                 w.Show();
             }
@@ -34,17 +46,6 @@ public class Scripture
             Console.Write(w.GetDisplayText());
             Console.Write(" ");
         }
-        
-    }
-
-    public bool IsCompletelyHidden()
-    {
-        return; 
-    }
-
-    public void HideRandomWords()
-    {
-        return;
     }
 }
 
