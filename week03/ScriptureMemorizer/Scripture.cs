@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 public class Scripture
 {
@@ -18,7 +19,7 @@ public class Scripture
             _words.Add(new Word(part));
         }
     }
-    public void GetDisplayText()
+    public string GetDisplayText()
     {
         return $"{_reference}: " + string.Join(" ", _words.Select(w => w.GetDisplayText()));
       
@@ -27,24 +28,29 @@ public class Scripture
 
     public bool IsCompletelyHidden()
     {
-         return _words.All(w = w.IsHidden); 
+         return _words.All(w => w.IsHidden());
     }
 
     public void HideRandomWords(int count)
     {
         Random rng = new Random();
-          foreach (Word w in _words)
+        int toHide = Math.Min(count, _words.Count);
+        var indices = new HashSet<int>();
+        while (indices.Count < toHide)
         {
-            if (rng.Next(1, _words.Count) > difficulty)
+            indices.Add(rng.Next(0, _words.Count));
+        }
+
+        for (int i = 0; i < _words.Count; i++)
+        {
+            if (indices.Contains(i))
             {
-                w.Show();
+                _words[i].Hide();
             }
             else
             {
-                w.Hide();
+                _words[i].Show();
             }
-            Console.Write(w.GetDisplayText());
-            Console.Write(" ");
         }
     }
 }
