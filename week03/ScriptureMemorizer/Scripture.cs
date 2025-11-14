@@ -12,16 +12,40 @@ public class Scripture
         _reference = reference;
 
         _words = new List<Word>();
-        string[] parts = text.Split("");
+        string[] parts = text.Split(" ");
         foreach (string part in parts)
         {
             _words.Add(new Word(part));
         }
     }
-        public string GetDisplayText()
+    public void GetDisplayText()
+    {
+        Random rng = new Random();
+        foreach (Word w in _words)
         {
-        return _reference.GetDisplayText() + " " + string.Join(" ", _words);
+            if (rng.Next(1, 100) > difficulty)
+            {
+                w.Show();
+            }
+            else
+            {
+                w.Hide();
+            }
+            Console.Write(w.GetDisplayText());
+            Console.Write(" ");
         }
+        
+    }
+
+    public bool IsCompletelyHidden()
+    {
+        return; 
+    }
+
+    public void HideRandomWords()
+    {
+        return;
+    }
 }
 
 //static void DisplayMessage()

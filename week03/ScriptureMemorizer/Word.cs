@@ -17,7 +17,7 @@ public class Word
 
     public void Show()
     {
-
+        _IsHidden = false;
     }
 
     public bool IsHidden()
@@ -27,8 +27,16 @@ public class Word
 
     public string GetDisplayText()
     {
-        Console.WriteLine("text");
-        return string.Empty;
+        if (_IsHidden)
+        {
+            return "_";
+        }
+        else
+        {
+            return _text;
+        }
+        //Console.WriteLine("text");
+        //return string.Empty;
     }
     
 

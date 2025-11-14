@@ -33,7 +33,7 @@ public class Reference
 
         var parts = new List<string>();
         if (!string.IsNullOrEmpty(_book)) parts.Add(_book);
-        if (_chapter != null) parts.Add(_chapter.ToString());
+        if (!string.IsNullOrEmpty(_chapter)) parts.Add(_chapter);
         if (!string.IsNullOrEmpty(_firstVerse)) parts.Add(_firstVerse);
         if (!string.IsNullOrEmpty(_lastVerse)) parts.Add(_lastVerse);
 

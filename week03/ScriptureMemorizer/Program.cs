@@ -6,27 +6,24 @@ class Program
     {
         //Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
 
-        Console.WriteLine("Here is a scripture to memorize: ");
+        Reference reference = new Reference("Nephi", 3, 6, 7);
+        //string text = Console.ReadLine();
+        Scripture scripture = new Scripture (reference, "And behold, the third time they did understand the voice which they heard; and it said unto them: Behold my Beloved Son, in whom I am well pleased, in whom I have glorified my name—hear ye him.");
 
-        Console.WriteLine("Nephi 3:6-7 And behold, the third time they did understand the voice which they heard; and it said unto them: Behold my Beloved Son, in whom I am well pleased, in whom I have glorified my name—hear ye him.");
+        Console.WriteLine("Here is a scripture to memorize.");
+        Console.WriteLine(scripture.GetDisplayText(0)); //difficulty set to zero shows the whole thing
 
+        Console.WriteLine("Press Enter to continue.");
         Console.ReadLine();
 
-        string reference = Console.ReadLine();
+        Console.Clear();
+        Console.WriteLine(scripture.GetDisplayText(5));
+
+    
         string text = Console.ReadLine();
-        Scripture scripture = new Scripture(reference, text);
-
-        Console.WriteLine("\nMemorize this scripture:");
-        Console.WriteLine(scripture.GetRenderedText());
-
-
-
-
-
+       
+        
     }
-
-
-
 }
 
 //https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng
