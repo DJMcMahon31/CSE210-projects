@@ -3,10 +3,10 @@ using System.Collections.Concurrent;
 using System.Runtime.CompilerServices;
 public class Reference
 {
-    private string _lastVerse;
-    private string _firstVerse;
-    private string _chapter;
     private string _book;
+    private string _chapter;
+    private string _firstVerse;
+    private string _lastVerse;
 
     public Reference(string book, string chapter, string firstVerse, string lastVerse)
     {
