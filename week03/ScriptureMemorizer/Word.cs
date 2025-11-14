@@ -12,7 +12,7 @@ public class Word
 
     public void Hide()
     {
-        _IsHidden = true;   
+        _IsHidden = true;
     }
 
     public void Show()
@@ -20,26 +20,19 @@ public class Word
         _IsHidden = false;
     }
 
-    /*
-    bool IsHidden()
-    {
-        if _IsHidden == false
-        {
-            
-        }
 
-        
+    public bool IsHidden()
+    {
+        return _IsHidden;
     }
-    */
+
 
     public string GetDisplayText()
     {
-        return _IsHidden ? new string("_", _text.Length) : _text;
+        return _IsHidden ? new string('_', _text.Length) : _text;
     }
+   
     
-
-
-    //static void Main()
 }
 //hidden words
 
