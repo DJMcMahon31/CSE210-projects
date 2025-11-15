@@ -32,28 +32,17 @@ class Program
 
             if (input == "quit")
             {
+                Console.WriteLine("Program ended by user.");
                 break;
             }
 
-        
+
             //Hide 1 random word per loop
             scripture.HideRandomWords(1);
         }
-        
-        Console.WriteLine(scripture.GetDisplayText()); //shows the whole thing
 
-
-        // Wait for the user to press Enter once to continue
-        Console.WriteLine("Press Enter to continue.");
-        Console.ReadLine();
-
-        Console.Clear();
-        Console.WriteLine(scripture.GetDisplayText());
-
-    
-        string text = Console.ReadLine();
+        return;  //this ends the program
        
-        
     }
 }
 
