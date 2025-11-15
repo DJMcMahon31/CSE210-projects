@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 public class Scripture
 {
@@ -30,28 +31,26 @@ public class Scripture
     {
          return _words.All(w => w.IsHidden());
     }
+    private static Random rng = new Random();
 
     public void HideRandomWords(int count)
     {
-        Random rng = new Random();
-        int toHide = Math.Min(count, _words.Count);
-        var indices = new HashSet<int>();
-        while (indices.Count < toHide)
+        //List of words still visible
+        var visibleWords = _words.Where(w => !w.IsHidden()).ToList();
+        if (visibleWords.Count == 0)
+            return;
+
+        int toHide = Math.Min(count, visibleWords.Count);
+
+        //randomly select words to hide
+        for (int i = 0; i < toHide; i++)
         {
-            indices.Add(rng.Next(0, _words.Count));
+            int index = rng.Next(visibleWords.Count);
+            visibleWords[index].Hide();
+            visibleWords.RemoveAt(index);  //ensures unique selection
         }
 
-        for (int i = 0; i < _words.Count; i++)
-        {
-            if (indices.Contains(i))
-            {
-                _words[i].Hide();
-            }
-            else
-            {
-                _words[i].Show();
-            }
-        }
-    }
+    }        
+    
 }
 
