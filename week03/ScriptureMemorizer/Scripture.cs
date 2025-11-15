@@ -55,16 +55,3 @@ public class Scripture
     }
 }
 
-//static void DisplayMessage()
-
-//refer reference class file and word class file
-//data type is going to be the class
-//reference John 3;16();
-
-/*_words = text.Split("")
-                     .Select(word => new Word())*/
-
-        /*HideRandomWords(numberToHide:int) : void;
-        GetDisplayText():string;
-        IsCompletelyHidden():bool;
-        */
