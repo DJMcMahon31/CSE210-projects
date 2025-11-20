@@ -25,23 +25,20 @@ class Program
         string[] commentMonster = {"'Wow'", "'Waste of time'", "'Old news'", "'Nothing new here'"};
         string[] commentSkye = {"'I have really wanted to go there, nice to see so much in this video'", "'Beautiful'"};
 
-      /*  Console.Write(videoCulloden);
-        Console.Write(videoMonster);
-        Console.Write(videoSkye);
-        */
+     
         Console.WriteLine($"Video: {videoBattleOfCulloden.GetDisplayText()}"); //output is "Video: Battle of Culloden by Brad Smith (600 seconds)"
         Console.WriteLine($"Comments: {commentBattleOfCulloden.GetDisplayText()}");
 
-        //Console.WriteLine("{videoCulloden[0]}");  //output is 'Battle of Culloden'
+    
         Console.WriteLine($"Number of comments: {commentCulloden.Length}"); //output is "Number of comments: 3"
         Console.WriteLine($"Comments: {string.Join(", ", commentCulloden.Take(4))}");  //output is Comments: 'Tragic', 'So long ago', 'Fascinating'"
-        Console.WriteLine();
+        Console.WriteLine(); //adds a line between the separate videos.S
        
 
         Console.WriteLine($"Video: {videoLochNessMonster.GetDisplayText()}");
         Console.WriteLine($"Comments: {commentLochNessMonster.GetDisplayText()}");
 
-        //Console.WriteLine("{videoMonster[0]}");
+     
         Console.WriteLine($"Number of comments: {commentMonster.Length}");
         Console.WriteLine($"Comments: {string.Join(", ", commentMonster.Take(4))}");
         Console.WriteLine();
