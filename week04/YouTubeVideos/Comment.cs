@@ -14,7 +14,7 @@ public class Comment
 
     public string GetDisplayText()
     {
-        return $"Name {_name} and comment {_comment}";
+        return $"Name: {_name} and comment: {_comment}";
 
     }
 }
