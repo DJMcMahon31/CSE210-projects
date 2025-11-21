@@ -1,20 +1,23 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 public class Order
 {
-    private string _productName;
-    private int _productID;
-    private double _price;
-    private string _address;
+       
+    private string _shippingLabel;
     private string _packingLabel;
 
-    public Order(string productName, int productID, double price, string address, string packingLabel)
-    {
-        _productName = productName;
-        _productID = productID;
-        _price = price;
-        _address = address;
+    public Order (string shippingLabel, string packingLabel)
+    {   
+       
+        _shippingLabel = shippingLabel;
         _packingLabel = packingLabel;
+
+    public string GetDisplayText()
+        {
+            return "{_shippingLabel}{_packingLabel}";
+        }  
+
 
     }
 }
