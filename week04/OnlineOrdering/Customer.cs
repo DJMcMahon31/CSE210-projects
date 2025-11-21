@@ -4,12 +4,12 @@ using System;
 
 public class Customer
 {
-    private string _name;
+    private string _customerName;
     private Address _address;
 
-    public Customer(string name, Address address)
+    public Customer(string customerName, Address address)
     {
-    _name = name;
+    _customerName = customerName;
     _address = address;
     }
     public bool inTheUSA()
@@ -18,6 +18,6 @@ public class Customer
     }
     public string GetDisplayText()
     {
-        return $"{_name}\n{_address.GetDisplayText()}";
+        return $"{_customerName}\n{_address.GetDisplayText()}";
     }
 }

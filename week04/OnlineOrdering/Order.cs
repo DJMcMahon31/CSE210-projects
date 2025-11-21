@@ -14,6 +14,40 @@ public class Order
         _packingLabel = packingLabel;
     }
 
+    public string ShippingLabel()
+    {
+        return _customer.DisplayText();
+    }
+
+    public double OrderCost()
+    {
+        double output = 0;
+        foreach (Product p in _products)
+        {
+            output += p.ExtendedPrice();
+        }
+
+        //add shipping
+        if (_customer.LivesInUSA())
+        {
+            output += 5.0;
+        }
+        else
+        {
+            output += 35.0;
+        }
+        return output;
+    }
+
+    public string PackingLabel()
+    {
+        string output = "";
+        foreach (Product p in _products)
+        {
+            output += p.PackingText();
+        }
+        return output;
+    }
     public string GetDisplayText()
         {
             return "{_shippingLabel}{_packingLabel}";
