@@ -6,13 +6,22 @@ public class Order
        
     private string _shippingLabel;
     private string _packingLabel;
+    private string _productName;
+    private int _productID;
+    private double _price;
+    private string _address;
+    private string _customer;
 
-    public Order (string shippingLabel, string packingLabel)
-    {   
-       
-        _shippingLabel = shippingLabel;
-        _packingLabel = packingLabel;
-    }
+
+
+    public Order(string productName, int productID, double price, string address, string packingLabel, string customer)
+{
+    _productName = productName;
+    _productID = productID;
+    _price = price;
+    _address = address;
+    _packingLabel = packingLabel;
+    _customer = customer;
 
     public string ShippingLabel()
     {
@@ -50,12 +59,15 @@ public class Order
     }
     public string GetDisplayText()
         {
-            return "{_shippingLabel}{_packingLabel}";
+            return $"{_productName} (ID: {_productID}) - ${_price:F2}\nShip to: {_address}\nLabel: {_packingLabel}";
         }  
-    public string Order1()
+    
+    /*public string AddProduct()
     {
-        return "{Product}{Customer}";
+        return;
     }
-    public string Customer()
+    */
+    }
+    
 }
     

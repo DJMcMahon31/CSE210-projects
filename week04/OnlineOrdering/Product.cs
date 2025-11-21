@@ -2,14 +2,14 @@ using System;
 
 public class Product
 {
-    private string _name;
+    private string _customerName;
     private int _productID;
     private int _quantity;
     private double _price;
 
-    public Product(string name, int productID, int quantity, double price)
+    public Product(string customerName, int productID, double price, int quantity)
     {
-        _name = name;
+        _customerName = customerName;
         _productID = productID;
         _quantity = quantity;
         _price = price;

@@ -14,7 +14,7 @@ public class Customer
     }
     public bool inTheUSA()
     {
-       return _address.inUSA();
+       return _address.LivesInUSA();
     }
     public string GetDisplayText()
     {
