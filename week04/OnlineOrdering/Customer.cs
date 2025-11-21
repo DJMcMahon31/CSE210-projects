@@ -7,6 +7,17 @@ public class Customer
     private string _customerName;
     private Address _address;
 
+    public string CustomerName {get { return _customerName; } }
+    public Address Address {get{return _address;}}
+
+    /*public string DisplayText
+    {
+        get
+        {
+            return $"{_customerName}\n{_address.DisplayText}";
+        }
+    } */
+
     public Customer(string customerName, Address address)
     {
     _customerName = customerName;
@@ -16,11 +27,11 @@ public class Customer
     {
        return _address.inUSA();
     }
-    /*public string GetDisplayText()
+    public string GetDisplayText()
     {
         return $"{_customerName}\n{_address.GetDisplayText()}";
     }
-    */
+    
 
     public string GetCustomerName()
     {

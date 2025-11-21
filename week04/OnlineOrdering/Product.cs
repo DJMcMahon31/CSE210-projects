@@ -7,13 +7,15 @@ public class Product
     private int _productID;
     private int _quantity;
     private double _price;
+    private string _packingText;
 
-    public Product(string customerName, int productID, double price, int quantity)
+    public Product(string customerName, int productID, double price, int quantity, string packingText)
     {
         _customerName = customerName;
         _productID = productID;
         _quantity = quantity;
         _price = price;
+        _packingText = packingText;
 
     }
     /*public string GetDisplayText()
@@ -56,4 +58,18 @@ public class Product
         return _productID;
     }
 
+    public double GetTotalPrice()
+    {
+        return _price * _quantity;
+    }
+
+    public string GetPackingText()
+    {
+        return _packingText;
+    }
+
+    public void SetPackingText(string packingText)
+    {
+        _packingText = packingText;
+    }
 }
