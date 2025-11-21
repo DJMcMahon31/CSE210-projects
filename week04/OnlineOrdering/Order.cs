@@ -5,15 +5,15 @@ public class Order
 {
        
 
-    private string _customer;
+    private Customer _customer;
     private List<Product> _product = new List<Product>();
 
 
 
-    public Order(string customer, List<Product> product)
+    public Order(Customer customer, List<Product> product)
     {
         _customer = customer;
-        _product = product;        
+        _product = new List<Product>();        
     }
 
 
@@ -51,17 +51,8 @@ public class Order
         }
         return output;
     }
-    public string GetDisplayText()
-        {
-            return $"{_productName} (ID: {_productID}) - ${_price:F2}\nShip to: {_address}\nLabel: {_packingLabel}";
-        }  
     
-    /*public string AddProduct()
-    {
-        return;
-    }
-    */
-    }
+    
     
 }
     
