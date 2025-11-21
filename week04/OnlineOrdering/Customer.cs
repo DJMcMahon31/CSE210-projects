@@ -16,5 +16,8 @@ public class Customer
     {
        return _address.inUSA();
     }
-    
+    public string GetDisplayText()
+    {
+        return $"{_name}\n{_address.GetDisplayText()}";
+    }
 }
