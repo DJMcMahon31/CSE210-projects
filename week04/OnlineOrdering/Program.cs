@@ -21,17 +21,17 @@ class Program
         Order o3 = new(c3, new List<Product>());
 
 
-        o1.AddProduct(new Product("Superior 2 inch common nails", 10010, 2.99, 3, "Nails - Common"));    
-        o1.AddProduct(new Product("Excellent 1 inch finishing nails", 10011, 4.99, 2, "Nails - Finishing"));
-        o1.AddProduct(new Product("Utility 2 inch gauge 3 Robertson wood screws", 11110, 6.99, 10, "Screws - Robertson"));
+        o1.AddProduct(new Product("common nails ", 10010, 2.99, 3, "Nails - Common"));    
+        o1.AddProduct(new Product("finishing nails ", 10011, 4.99, 2, "Nails - Finishing"));
+        o1.AddProduct(new Product("Robertson screws ", 11110, 6.99, 10, "Screws - Robertson"));
 
-        o2.AddProduct(new Product("2 lb hammer", 10020, 24.99, 1, "Hammer - 2 lb"));
-        o2.AddProduct(new Product("5 lb hammer", 10022, 54.99, 1, "Hammer - 5 lb" ));
-        o2.AddProduct(new Product("10 lb hammer", 10024, 89.99, 1, "Hammer - 10 lb"));
+        o2.AddProduct(new Product("2 lb hammer ", 10020, 24.99, 1, "Hammer - 2 lb"));
+        o2.AddProduct(new Product("5 lb hammer ", 10022, 54.99, 1, "Hammer - 5 lb" ));
+        o2.AddProduct(new Product("10 lb hammer ", 10024, 89.99, 1, "Hammer - 10 lb"));
 
-        o3.AddProduct (new Product("Japanese finishing saw", 12020, 69.99, 2, "Saw - Finishing"));
-        o3.AddProduct (new Product("Japanese utility saw", 12025, 79.99, 2, "Saw - Utility"));
-        o3.AddProduct (new Product("Gentleman's saw", 10220, 127.99, 1, "Saw - Gentlman's"));
+        o3.AddProduct (new Product("Japanese finishing saw ", 12020, 69.99, 2, "Saw - Finishing"));
+        o3.AddProduct (new Product("Japanese utility saw ", 12025, 79.99, 2, "Saw - Utility"));
+        o3.AddProduct (new Product("Gentleman's saw ", 10220, 127.99, 1, "Saw - Gentlman's"));
 
         Console.WriteLine("==== Packing Label ====");
         Console.WriteLine(o1.PackingLabel());
