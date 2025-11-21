@@ -12,12 +12,36 @@ public class Customer
     _customerName = customerName;
     _address = address;
     }
-    public bool inTheUSA()
+    public bool inUSA()
     {
-       return _address.LivesInUSA();
+       return _address.inUSA();
     }
-    public string GetDisplayText()
+    /*public string GetDisplayText()
     {
         return $"{_customerName}\n{_address.GetDisplayText()}";
     }
+    */
+
+    public string GetCustomerName()
+    {
+        return _customerName;
+    }
+
+    public void SetCustomerName(string customerName)
+    {
+        _customerName = customerName;
+    }
+
+    public Address GetAddress()
+    {
+        return _address;
+    }
+
+    public void SetAddress(Address address)
+    {
+        _address = address;
+    }
+
+
+
 }

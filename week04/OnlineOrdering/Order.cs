@@ -4,24 +4,18 @@ using System.Security.Cryptography.X509Certificates;
 public class Order
 {
        
-    private string _shippingLabel;
-    private string _packingLabel;
-    private string _productName;
-    private int _productID;
-    private double _price;
-    private string _address;
+
     private string _customer;
+    private List<Product> _product = new List<Product>();
 
 
 
-    public Order(string productName, int productID, double price, string address, string packingLabel, string customer)
-{
-    _productName = productName;
-    _productID = productID;
-    _price = price;
-    _address = address;
-    _packingLabel = packingLabel;
-    _customer = customer;
+    public Order(string customer, List<Product> product)
+    {
+        _customer = customer;
+        _product = product;        
+    }
+
 
     public string ShippingLabel()
     {
@@ -31,19 +25,19 @@ public class Order
     public double OrderCost()
     {
         double output = 0;
-        foreach (Product p in _products)
+        foreach (Product p in _product)
         {
-            output += p.ExtendedPrice();
+            output += p.totalPrice();
         }
 
         //add shipping
-        if (_customer.LivesInUSA())
+        if (_customer.inUSA())
         {
-            output += 5.0;
+            output += 5;
         }
         else
         {
-            output += 35.0;
+            output += 35;
         }
         return output;
     }
@@ -51,7 +45,7 @@ public class Order
     public string PackingLabel()
     {
         string output = "";
-        foreach (Product p in _products)
+        foreach (Product p in _product)
         {
             output += p.PackingText();
         }
