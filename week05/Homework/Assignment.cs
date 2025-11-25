@@ -12,7 +12,7 @@ public class Assignment
     }
     public string GetSummary()
     {
-        return $"{_studentName} - {_topic}";
+        return $"Name: {_studentName}, Topic: {_topic}";
     }
 
     public override string ToString()
