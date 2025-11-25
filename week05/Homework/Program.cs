@@ -6,6 +6,8 @@ class Program
     {
         //Console.WriteLine("Hello World! This is the Homework Project.");
     
-        
+        Assignment a1 = new("Albert Albert", "Physics");
+    
+        Console.WriteLine(a1);
     }
 }
