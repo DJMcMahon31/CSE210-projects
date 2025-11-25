@@ -18,9 +18,6 @@ public class Assignment
     public override string ToString()
     {
         return GetSummary();
-        {
-            
-        }
     }
 
 
