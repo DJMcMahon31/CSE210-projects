@@ -1,14 +1,64 @@
 using System;
+using System.Threading;
+
 
 public class BreathingActivity : Activity
 {
-    private string _breathing;
-
-    public BreathingActivity(string name, string description, int duration, string breathing)
-    : base(name, description, duration)
+    public BreathingActivity()
+        : base("Breathing", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.", 0)  //constructor
     {
-        _breathing = breathing;
     }
+
+    public void Start()
+    {
+    //Welcome message
+        Console.Clear();
+        Console.WriteLine($"-_-_-Welcome to the {Name} Activity. -_-_-"); 
+        Console.WriteLine();
+        Console.WriteLine(Description);
+        Console.WriteLine();
+    
+
+    //Ask for duration
+        Console.Write("How long, in seconds, would you like for your session? ");
+        Duration = int.Parse(Console.ReadLine());
+        Console.WriteLine();
+
+    //Get ready spinner
+        Console.WriteLine("Get ready...");
+        ShowSpinner(3);
+        Console.WriteLine();
+
+    //Breathing loop
+        DateTime endTime = DateTime.Now.AddSeconds(Duration);
+        while (DateTime.Now < endTime)
+        {
+            //Breath in
+            Console.Write("Breath in... ");
+            ShowCountDown(3);
+            Console.WriteLine();
+
+            //Breath out
+            Console.Write("Breath out... ");
+            ShowCountDown(4);
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+
+    //Ending message
+    Console.WriteLine("Well Done!");
+    Console.WriteLine($"You have completed another {Duration} seconds of the {Name}.");
+    ShowSpinner(3);
+    }
+}
+
+
+
+
+
+
+
+
 
     //"Welcome to the Breathing Activity.
 
@@ -25,4 +75,3 @@ public class BreathingActivity : Activity
 
     //"Well done!
     //"You have completed another 30 seconds of the Breathing Activity"
-}
