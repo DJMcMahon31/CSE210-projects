@@ -12,7 +12,7 @@ PAUSING
 Thread.Sleep()
 
 Console.WriteLine ("Going to sleep for a bit...");
-Thread.Sleep(1000);  //this is for on second
+Thread.Sleep(1000);  //this is for one second
 Console.WriteLine ("I'm back!");
 ..........................
 using System:
@@ -74,7 +74,7 @@ for (int i = 5; i > 0, i--);
 ...........................
 SPINNERS
 //     |/-\|/-\
-List<string>
+List<string> animationStrings = new List<string>();
 animationStrings.Add("|");
 animationStrings.Add("/");
 animationStrings.Add("-");
