@@ -2,11 +2,11 @@ using System;
 
 public class BreathingActivity : Activity
 {
-    private string _placeholderBA;
+    private string _breathing;
 
-    public BreathingActivity(string placeHolder, string placeholderBA)
-    : base(placeHolder)
+    public BreathingActivity(string name, string description, int duration, string breathing)
+    : base(name, description, duration)
     {
-        _placeholderBA = placeholderBA;
+        _breathing = breathing;
     }
 }
