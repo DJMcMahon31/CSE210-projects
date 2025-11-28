@@ -1,50 +1,67 @@
 <mxfile host="65bd71144e">
     <diagram id="KOx5OjfkfLuhXTJORzwg" name="Page-1">
-        <mxGraphModel dx="335" dy="2073" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+        <mxGraphModel dx="334" dy="2073" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="Activity" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="2" value="Activity" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="150" y="-1650" width="200" height="180" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="_name : string&lt;div&gt;_description : string&lt;/div&gt;&lt;div&gt;_duration : int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                <mxCell id="3" value="_name : string&lt;div&gt;_description : string&lt;/div&gt;&lt;div&gt;_duration : int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="2" vertex="1">
                     <mxGeometry y="30" width="200" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="Activity()&lt;div&gt;DisplayStartingMeeting() : void&lt;/div&gt;&lt;div&gt;DisplayEndingMeeting() : void&lt;/div&gt;&lt;div&gt;ShowSpinner(seconds : int) : void&lt;/div&gt;&lt;div&gt;ShowCountDown(seconds : int) void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                <mxCell id="5" value="Activity()&lt;div&gt;DisplayStartingMeeting() : void&lt;/div&gt;&lt;div&gt;DisplayEndingMeeting() : void&lt;/div&gt;&lt;div&gt;ShowSpinner(seconds : int) : void&lt;/div&gt;&lt;div&gt;ShowCountDown(seconds : int) void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="2" vertex="1">
                     <mxGeometry y="90" width="200" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="BreathingActivity" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="7" value="BreathingActivity" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="80" y="-1420" width="140" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;BreathingActivity()&lt;div&gt;Run() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="7">
+                <mxCell id="9" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;BreathingActivity()&lt;div&gt;Run() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="7" vertex="1">
                     <mxGeometry y="30" width="140" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="ListingActivity" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="29" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="11" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="ListingActivity" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="240" y="-1420" width="190" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="_count : int&lt;div&gt;_prompts : List&amp;lt;string&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="11">
+                <mxCell id="12" value="_count : int&lt;div&gt;_prompts : List&amp;lt;string&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="11" vertex="1">
                     <mxGeometry y="30" width="190" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="ListingActivity()&lt;div&gt;Run() : void&lt;/div&gt;&lt;div&gt;GetRandomPrompt() : void&lt;/div&gt;&lt;div&gt;GetListFromUser() : List&amp;lt;string&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="11">
+                <mxCell id="14" value="ListingActivity()&lt;div&gt;Run() : void&lt;/div&gt;&lt;div&gt;GetRandomPrompt() : void&lt;/div&gt;&lt;div&gt;GetListFromUser() : List&amp;lt;string&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="11" vertex="1">
                     <mxGeometry y="80" width="190" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="ReflectingActivity" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="15" value="ReflectingActivity" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="450" y="-1420" width="190" height="210" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="_prompts : List&amp;lt;string&amp;gt;&lt;div&gt;_questions : List&amp;lt;string&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="15">
+                <mxCell id="16" value="_prompts : List&amp;lt;string&amp;gt;&lt;div&gt;_questions : List&amp;lt;string&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="15" vertex="1">
                     <mxGeometry y="30" width="190" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="ReflectingActivity()&lt;div&gt;Run() : void&lt;/div&gt;&lt;div&gt;GetRandomPrompt() : string&lt;/div&gt;&lt;div&gt;GetRandomQuestion() : string&lt;/div&gt;&lt;div&gt;DisplayPrompt() : void&lt;/div&gt;&lt;div&gt;DisplayQuestions() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="15">
+                <mxCell id="18" value="ReflectingActivity()&lt;div&gt;Run() : void&lt;/div&gt;&lt;div&gt;GetRandomPrompt() : string&lt;/div&gt;&lt;div&gt;GetRandomQuestion() : string&lt;/div&gt;&lt;div&gt;DisplayPrompt() : void&lt;/div&gt;&lt;div&gt;DisplayQuestions() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="15" vertex="1">
                     <mxGeometry y="90" width="190" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" value="AffirmationsActivity" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="30" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="19" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="AffirmationsActivity" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="660" y="-1420" width="170" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="_affirmation : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+                <mxCell id="20" value="_affirmation : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="19" vertex="1">
                     <mxGeometry y="30" width="170" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="DisplayAffirmation() : void&lt;div&gt;GetRandomAffirmation() : string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+                <mxCell id="22" value="DisplayAffirmation() : void&lt;div&gt;GetRandomAffirmation() : string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="19" vertex="1">
                     <mxGeometry y="60" width="170" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="160" y="-1420" as="sourcePoint"/>
+                        <mxPoint x="210" y="-1470" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;exitX=0.198;exitY=-0.01;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.984;entryY=0.986;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="15" target="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="-1560" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>
