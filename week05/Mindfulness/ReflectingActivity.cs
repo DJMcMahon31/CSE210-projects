@@ -1,21 +1,115 @@
 using System;
+using System.Collections.Generic;
 
 public class ReflectingActivity : Activity
 {
-    private List<string> _prompts;
-    private List<string> _questions;
-
-    public ReflectingActivity(string name, string description, int duration, List<string> prompts, List<string> questions)
-        : base(name,description, duration)
+    private List<string> _prompts = new List<string>
     {
-        _prompts = prompts;
-        _questions = questions;
+        "Think of a time when you did something really difficult.",
+        "Recall a moment when you helped someone in need.",
+        "Think of a time when you worked hard to achieve a goal",
+        "Remember a time when you remained calm in a stressful situation."
+    };
+    private List<string> _questions = new List<string>
+    {
+        "Why was this experience meaningful?",
+        "What did you learn about yourself?",
+        "How did this moment help you grow?",
+        "What strengths did you show during this moment?"
+    };
+
+    private static Random _rand = new Random();  //shared random generator
+
+    public ReflectingActivity()  //no need to pass lists in the constructor this way. But if you used 'var questions = new List<string>'you would have to pass lists in the constructor.    e.g. 'var activity = new RefectingActivity(prompts,questions);'
+        : base("Reflecting","This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of our life.", 0)
+    {
     }
 
+//  RANDOM PICK HELPERS
+    private string GetRandomPrompt()
+    {
+        int index = _rand.Next(_prompts.Count);
+        return _prompts[index];
+    }
+
+    private string GetRandomQuestion()
+    {
+        int index = _rand.Next(_questions.Count);
+        return _questions[index];
+    }
+
+//  MAIN START
+
+    public void Start()
+    {
+    //Welcome message
+        Console.Clear();
+        Console.WriteLine($"-_-_-Welcome to the {Name} Activity. -_-_-"); 
+        Console.WriteLine();
+        Console.WriteLine(Description);
+        Console.WriteLine();
+
+    //Ask for duration
+        Console.Write("How long, in seconds, would you like for your session? ");
+        Duration = int.Parse(Console.ReadLine());
+        Console.WriteLine();
+
+    //Get ready spinner
+        Console.WriteLine("Get ready...");
+        ShowSpinner(3);
+        Console.WriteLine(); 
+        
+        DisplayRandomPrompt();
+        Console.WriteLine();
+    }
+
+//  DISPLAYING PROMPTS
+
+    public void DisplayRandomPrompt()
+    {
+        string prompt = GetRandomPrompt();
+        
+        Console.WriteLine("Consider the following prompt.");
+        Console.WriteLine($"-_-_- {prompt} -_-_-");
+        Console.WriteLine();
+        Console.WriteLine("When you have something in mind, press enter to continue. ");
+        Console.ReadLine();
+        Console.WriteLine("You will be presented with some questions in a few moments.");
+        ShowSpinner(3);
+    }
+
+//  DISPLAYING QUESTIONS
+
+    public void DisplayRandomQuestion()
+    {
+        Console.WriteLine("Now ponder on each of the following questions as they related to this experience.");
+        ShowSpinner(3);
+        Console.WriteLine("You may begin in: ");
+        ShowCountDown(5);
+
+        DateTime endTime = DateTime.Now.AddSeconds(Duration);
+
+        while (DateTime.Now < endTime)
+        {
+            string question = GetRandomQuestion();
+            Console.WriteLine();
+            Console.WriteLine("How did you feel when it was complete? ");
+            ShowSpinner(5);
+        }
+        
+        Console.WriteLine();
+        Console.WriteLine("Well Done!");
+        ShowSpinner(3);
+
+        Console.WriteLine($"You have completed another {Duration} seconds of the {Name} Activity.");
+        ShowSpinner(3);
+    }
+
+}
     /*
     "Welcome to the Reflecting Activity.
 
-    This activity will help you reflect on times in your lif when you have shown strength and resilience. This will help you recognize the power you hve and how you can use it in other aspects of our life.
+    This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you hve and how you can use it in other aspects of our life.
 
     How long, in seconds, would you like for your session?"
 
@@ -30,6 +124,6 @@ public class ReflectingActivity : Activity
     Well done! (spinner)
     You have completed another 30 seconds of the Reflecting Activity."
        as an enhancement put in your program a function to not allow duplicate questions until all options have been completed
-       
+
     */
-}
+
