@@ -47,9 +47,6 @@ public class BreathingActivity : Activity
 
     //Ending message
             DisplayEndingMessage();
-
-    //or
-    //DisplayEndingMessage();
     
    }
 }
