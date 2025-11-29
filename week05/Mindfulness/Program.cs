@@ -16,7 +16,7 @@ class Program
             Console.WriteLine("1. Breathing Activity");
             Console.WriteLine("2. Reflecting Activity");
             Console.WriteLine("3. Listing Activiy");
-            Console.WriteLine("4. Yoga");
+            Console.WriteLine("4. Yoga Activity");
             Console.WriteLine("5. Quit");
             Console.Write("Select a choice from the menu:");
 
