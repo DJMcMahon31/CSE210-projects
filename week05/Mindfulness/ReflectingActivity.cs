@@ -18,8 +18,6 @@ public class ReflectingActivity : Activity
         "What strengths did you show during this moment?"
     };
 
-    private static Random _rand = new Random();  //shared random generator
-
     public ReflectingActivity()  //no need to pass lists in the constructor this way. But if you used 'var questions = new List<string>'you would have to pass lists in the constructor.    e.g. 'var activity = new RefectingActivity(prompts,questions);'
         : base("Reflecting","This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of our life.", 0)
     {
@@ -40,14 +38,10 @@ public class ReflectingActivity : Activity
 
 //  MAIN START
 
-    public void Start()
+    public override void Run()
     {
     //Welcome message
-        Console.Clear();
-        Console.WriteLine($"-_-_-Welcome to the {Name} Activity. -_-_-"); 
-        Console.WriteLine();
-        Console.WriteLine(Description);
-        Console.WriteLine();
+        DisplayStartingMessage();
 
     //Ask for duration
         Console.Write("How long, in seconds, would you like for your session? ");
@@ -101,8 +95,7 @@ public class ReflectingActivity : Activity
         Console.WriteLine("Well Done!");
         ShowSpinner(3);
 
-        Console.WriteLine($"You have completed another {Duration} seconds of the {Name} Activity.");
-        ShowSpinner(3);
+        DisplayEndingMessage();
     }
 
 }

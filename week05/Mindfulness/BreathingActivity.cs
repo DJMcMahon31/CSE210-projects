@@ -9,7 +9,7 @@ public class BreathingActivity : Activity
     {
     }
 
-    public void Start()
+    public override void Run()
     {
     //Welcome message
         Console.Clear();
@@ -46,10 +46,12 @@ public class BreathingActivity : Activity
         }
 
     //Ending message
-    Console.WriteLine("Well Done!");
-    Console.WriteLine($"You have completed another {Duration} seconds of the {Name}.");
-    ShowSpinner(3);
-    }
+            DisplayEndingMessage();
+
+    //or
+    //DisplayEndingMessage();
+    
+   }
 }
 
 

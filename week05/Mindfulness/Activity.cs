@@ -1,7 +1,10 @@
 using System;
+using System.Collections.Generic;
+using System.Threading;
 
-public class Activity
+public abstract class Activity
 {
+    protected Random _rand = new Random();
     //public string _name;
     //public string _description;
     //public int _duration;
@@ -34,10 +37,12 @@ public class Activity
     {
         _name = name;
         _description = description;
+        Duration = duration;
     }
 
     public void DisplayStartingMessage()
     {
+
         Console.Clear();
         Console.WriteLine($" -_-_- {_name} activity -_-_-");
         Console.WriteLine(Description);
