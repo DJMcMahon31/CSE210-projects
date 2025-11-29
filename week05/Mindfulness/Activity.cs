@@ -42,16 +42,16 @@ public abstract class Activity
 
     public void DisplayStartingMessage()
     {
-
-        Console.Clear();
-        Console.WriteLine($" -_-_- {_name} activity -_-_-");
+        Console.Clear(); 
+        Console.WriteLine($"-_-_- {Name} -_-_-");
         Console.WriteLine(Description);
-        Console.Write("\nEnter the duration (in seconds): ");
-    
+        Console.WriteLine();
+
+        Console.WriteLine("How long, in seconds, would you like for your session? ");
         Duration = int.Parse(Console.ReadLine());
 
         Console.WriteLine("\nPrepare to begin...");
-        ShowSpinner(5);
+        ShowSpinner(3);
         Console.Clear();
     }
 
@@ -65,7 +65,7 @@ public abstract class Activity
 
     public void ShowSpinner(int seconds)
     {
-        List<string> animationStrings = new List<string>();
+        /*List<string> animationStrings = new List<string>();
         animationStrings.Add("|");
         animationStrings.Add("/");
         animationStrings.Add("-");
@@ -75,31 +75,20 @@ public abstract class Activity
         animationStrings.Add("-");
         animationStrings.Add("\\");
         animationStrings.Add("|");
-        foreach (string s in animationStrings)
+        foreach (string s in animationStrings)*/  //this was causing a problem. replacing it with the code below:
+
+        string[] spinner = { "|", "/", "-", "\\" };
+        DateTime endTime = DateTime.Now.AddSeconds(seconds);
+        int i = 0;
+
+        while (DateTime.Now < endTime)
         {
-            Console.Write(s);
-            Thread.Sleep(1000);
+            Console.Write(spinner[i % spinner.Length]);
+            Thread.Sleep(250);
             Console.Write("\b \b");
+            i++;
         }
-        Console.WriteLine("Done.");
-
-        //this can also be written as this:
-        /*
-        public void ShowSpinner(int seconds)
-        {
-            string[] spinner = {"/", "-", "\\", "|"};
-            DateTime end = DateTime.Now.AddSeconds(seconds);
-            int i = 0
-
-            while (DateTime.Now < end)
-            {
-                Console.Write(spinner[i % spinner.Length]);
-                Thread.Sleep(200);
-                Console.Write("\b");
-                i++;
-            }
-        }
-        */
+        
     }
 
     public void ShowCountDown(int seconds)

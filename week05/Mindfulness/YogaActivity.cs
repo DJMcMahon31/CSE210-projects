@@ -28,10 +28,13 @@ public class YogaActivity : Activity
         Console.WriteLine("You may begin in:");
         ShowCountDown(5);
 
-        Console.WriteLine();
-
         Console.WriteLine($"Hold the {pose} for {Duration} seconds...");
-        ShowSpinner(Duration);
+        DateTime endTime = DateTime.Now.AddSeconds(Duration);
+
+        while (DateTime.Now < endTime)
+        {
+            ShowSpinner(1); // update spinner every 1 second
+        }
 
         Console.WriteLine();
         DisplayEndingMessage();

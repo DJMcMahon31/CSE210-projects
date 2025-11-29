@@ -41,12 +41,12 @@ public class ReflectingActivity : Activity
     public override void Run()
     {
     //Welcome message
-        DisplayStartingMessage();
+        DisplayStartingMessage();  //includes duration input
 
     //Ask for duration
-        Console.Write("How long, in seconds, would you like for your session? ");
+        /*Console.Write("How long, in seconds, would you like for your session? ");
         Duration = int.Parse(Console.ReadLine());
-        Console.WriteLine();
+        Console.WriteLine();*/
 
     //Get ready spinner
         Console.WriteLine("Get ready...");
@@ -54,7 +54,7 @@ public class ReflectingActivity : Activity
         Console.WriteLine(); 
         
         DisplayRandomPrompt();
-        Console.WriteLine();
+        DisplayRandomQuestion();
     }
 
 //  DISPLAYING PROMPTS
@@ -77,9 +77,9 @@ public class ReflectingActivity : Activity
     public void DisplayRandomQuestion()
     {
         Console.WriteLine("Now ponder on each of the following questions as they related to this experience.");
-        ShowSpinner(3);
+        ShowSpinner(2);
         Console.WriteLine("You may begin in: ");
-        ShowCountDown(5);
+        ShowCountDown(2);
 
         DateTime endTime = DateTime.Now.AddSeconds(Duration);
 
@@ -87,13 +87,10 @@ public class ReflectingActivity : Activity
         {
             string question = GetRandomQuestion();
             Console.WriteLine();
-            Console.WriteLine("How did you feel when it was complete? ");
+            Console.WriteLine(question);
+            Console.WriteLine("Press ENTER when ready for the next question...");
             ShowSpinner(5);
         }
-        
-        Console.WriteLine();
-        Console.WriteLine("Well Done!");
-        ShowSpinner(3);
 
         DisplayEndingMessage();
     }
