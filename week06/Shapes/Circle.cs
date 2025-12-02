@@ -2,5 +2,5 @@ using System;
 
 class Circle : Shape
 {
-    private double _double;
+    public double Radius { get; set; }
 }
