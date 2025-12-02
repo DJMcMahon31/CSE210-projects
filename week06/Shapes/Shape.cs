@@ -1,6 +1,9 @@
 using System;
 
-public class Shape
-{
-    private string _colour;
+public abstract class Shape
+{    
+    public string Colour { get; set; }
+
+    public abstract double GetArea();
+
 }
