@@ -34,3 +34,23 @@ class Circle : Shape
 //OVERRIDE GetArea()
 //  public abstract double GetArea();  //base class defined an abstract method
 //  { return Math.PI * Radius * Radius; }
+
+
+//could also be written this way:
+/*
+public class Circle : Shape
+{
+    private double _radius;
+
+    public Circle(string color, double radius) : base (color)
+    {
+        _radius = radius;
+    }
+
+    // Notice the use of the override keyword here
+    public override double GetArea()
+    {
+        return _radius * _radius * Math.PI;
+    }
+}
+*/
