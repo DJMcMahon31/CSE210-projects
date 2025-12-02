@@ -9,7 +9,31 @@ public abstract class Shape
     //e.g. 'private string _color' is not needed because the auto-properties have already stored this internally
     //e.g. 'public Shape(string color' is not needed because derived classes already receive and set the color
     //e.g. '_color = color' is not needed because the Auto-property setter(Color = color) already handles the assignment
-    
+
     public abstract double GetArea();
 
 }
+
+//The code could also look like this as per the sample shown in the assignment
+/*
+public abstract class Shape
+{
+    private string _color;
+
+    public Shape(string color)
+    {
+        _color = color;
+    }
+
+    public string GetColor()
+    {
+        return _color;
+    }
+
+    public void SetColor(string color)
+    {
+        _color = color;
+    }
+        public abstract double GetArea();
+}
+*/
