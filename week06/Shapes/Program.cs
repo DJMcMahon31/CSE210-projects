@@ -16,6 +16,7 @@ class Program
         //display information about each shape
         foreach (Shape s in shapes)
         {
+            Console.WriteLine($"Shape Type: {s.GetType().Name}");
             Console.WriteLine($"Shape Color: {s.Color}");
             Console.WriteLine($"Shape Area: {s.GetArea()}");
             Console.WriteLine();
@@ -38,3 +39,48 @@ class Program
 //  foreach (Shape s in shapes)
 //  { Console.WriteLine($"Color: {s.Color}"; Console.WriteLine($"Area: {s.GetArea()}"); }
 // -- breakdown of the polymorphism: the variable 's' is typed as Shape; the actual object may be: Square, Rectangle, or Circle; when calling 's.GetArea()' C# automatically chooses the correct override.
+
+//WAYS TO SHOW WHICH SHAPE IS BEING REFERRED TO:
+//OPTION # 1 - USE 'GetType().Name'  -- easiest and most common
+  //Console.WriteLine($"Shape Type: {s.GetType().Name}");
+  //Console.WriteLine($"Color: {s.Color}");
+  //Console.WriteLine($"Area: {s.GetArea()}");
+  //Console.WriteLine();
+
+//OPTION # 2 - ADD A METHOD TO THE BASE CLASS (GetName or GetShapeType)
+  //In Shape.cs:
+  //public string GetShapeName()
+  //{
+      //return GetType().Name;
+  //}
+  //In Program.cs:
+  //Console.WriteLine($"Shape Type: {s.GetShapeName()}");
+  //Console.WriteLine($"Color: {s.Color}");
+  //Console.WriteLine($"Area: {s.GetArea()}");
+  //Console.WriteLine();
+    //this keeps the naming logic inside the object instead of the program
+
+//OPTION # 3 - ADD A VIRTUAL OR ABSTRACT METHOD SO EACH SHAPE CAN PROVIDE ITS OWN NAME
+  //In Shape.cs:
+   //public abstract string GetName();
+  //In Square.cs:
+   //public override string GetName()
+   // {
+        //return "Square";
+   // } 
+  //In Rectangle.cs:
+    //public override string GetName()
+    //{
+    //    return "Rectangle";
+    //} 
+  //In Circle.cs:
+    //public override string GetName()
+    //{
+        //return "Circle";
+    //}
+  //In Program.cs:
+    //Console.WriteLineI$"Shape Type: {s.GetName()"};
+
+ 
+
+
