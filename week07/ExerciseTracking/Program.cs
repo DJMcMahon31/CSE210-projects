@@ -15,11 +15,11 @@ class Program
         BikingActivity bike = new BikingActivity(distance: 18, minutes: 30);
        
 
-        Console.WriteLine(swim.GetSummary());
+        Console.WriteLine (swim.GetSummary());
 
-        Console.WriteLine(bike.GetSummary());
+        Console.WriteLine (bike.GetSummary());
 
-        Console.WriteLine(run.GetSummary());
+        Console.WriteLine (run.GetSummary());
     }
 }
 

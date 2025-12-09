@@ -16,6 +16,6 @@ public class RunningActivity : Activity
     public override double GetPace() => Minutes / _distance;
     public override string GetSummary()
     {
-        return $"{Date.ToShortDateString()}Running ({Minutes} min): Distance: {GetDistance():0.00} km, Speed: {GetSpeed():0.00} kph, Pace: {GetPace():0.00} min/km";
+        return $"{Date.ToShortDateString()} Running ({Minutes} min): Distance: {GetDistance():0.00} km, Speed: {GetSpeed():0.00} kph, Pace: {GetPace():0.00} min/km";
     }
 }
