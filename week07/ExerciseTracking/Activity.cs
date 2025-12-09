@@ -10,7 +10,7 @@ public abstract class Activity
     public double Speed {get; set; }
     public double Pace {get; set; }
 
-    public string GetSummary();
+    public abstract string GetSummary();
    
 }
 
