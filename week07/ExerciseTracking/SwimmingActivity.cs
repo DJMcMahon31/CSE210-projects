@@ -14,7 +14,7 @@ class SwimmingActivity :Activity
     //Distance (km) = swimming laps * 50 / 1000
     public override double GetDistance()
     {
-        return _laps * 50/1000; 
+        return _laps * 50/1000.0; 
     }
 
     //Speed (mph or kph) = (distance / minutes) * 60
