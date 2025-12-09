@@ -20,10 +20,6 @@ class Program
         bike.Distance = 17.5;
         bike.Speed = 35;
         bike.Pace = 7;
-        
-        double Distance = 4.8;
-        double Speed = 3.1;
-        double Pace = 8.7;
 
         Console.WriteLine($"{DateTime.Now.ToShortDateString()} Running (30 min) - Distance {Distance}, Speed {Speed}, Pace: {Pace}");
 

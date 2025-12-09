@@ -1,10 +1,36 @@
 using System;
 
 class SwimmingActivity :Activity
-{
-    public override string GetSummary()
+{  
+    
+    private int _laps;
+
+    public SwimmingActivity(int laps, int minutes)
     {
-        return $"{Date.ToShortDateString()}Swimming: Distance (km) = {Distance}, Speed (kph): {Speed}, Pace (min per km): {Pace}";
+        _laps = laps;
+        Minutes = minutes;
+    }
+
+    //Distance (km) = swimming laps * 50 / 1000
+    public override double GetDistance()
+    {
+        return _laps * 50/1000; 
+    }
+
+    //Speed (mph or kph) = (distance / minutes) * 60
+    public override double GetSpeed()
+    {
+        return (GetDistance() / Minutes) * 60;
+    }
+
+    //Pace (min per mile or min per km)= minutes / distance
+    public override double GetPace()
+    {
+        return Minutes / GetDistance();
+    }
+        public override string GetSummary()
+    {
+        return $"{Date.ToShortDateString()}Swimming: Distance (km) = {GetDistance}, Speed (kph): {GetSpeed}, Pace (min per km): {GetPace}";
     }
 
 
