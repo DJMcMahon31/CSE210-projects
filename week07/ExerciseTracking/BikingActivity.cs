@@ -4,17 +4,17 @@ using System.Dynamic;
 class BikingActivity : Activity
 {
 
-    public BikingActivity(int laps, int minutes)
-        base: {_laps, minutes, distance, speed, pace};
+    public BikingActivity(double distance, int minutes)
+       
     {
-        _laps = laps;
+        Distance = distance;
         Minutes = minutes;
     }
-    public override double GetDistance() => _distance;
-    public override double GetSpeed() => (_distance/ Minutes) * 60;
-    public override double GetPace() => Minutes / GetDistance;
+    public override double GetDistance() => Distance;
+    public override double GetSpeed() => (Distance/ Minutes) * 60;
+    public override double GetPace() => Minutes/GetDistance();
     public override string GetSummary()
     {
-        return $"{Date.ToShortDateString()}Biking: Distance (km) = {Distance}, Speed (kph): {Speed}, Pace (min per km): {Pace}";
+       return $"{DateTime.Now.ToShortDateString()}Running ({Minutes} min): Distance (km): {GetDistance():0.00} km, Speed: {GetSpeed():0.00} kph, Pace: {GetPace():0.00} min/km";
     }
 }
