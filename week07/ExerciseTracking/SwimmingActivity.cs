@@ -4,6 +4,8 @@ class SwimmingActivity :Activity
 {
     public override string GetSummary()
     {
-        return $"Swimming: Distance = {Distance}, Speed: {Speed}, Pace: {Pace}";
+        return $"{Date.ToShortDateString()}Swimming: Distance (km) = {Distance}, Speed (kph): {Speed}, Pace (min per km): {Pace}";
     }
+
+
 }

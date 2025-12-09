@@ -6,6 +6,7 @@ using System;
 
 public abstract class Activity
 {
+    public DateTime Date {get; set; } = DateTime.Now;
     public double Distance {get; set; }
     public double Speed {get; set; }
     public double Pace {get; set; }

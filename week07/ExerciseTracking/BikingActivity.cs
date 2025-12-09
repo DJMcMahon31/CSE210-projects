@@ -4,6 +4,6 @@ class BikingActivity : Activity
 {
     public override string GetSummary()
     {
-        return $"Biking: Distance = {Distance}, Speed: {Speed}, Pace: {Pace}";
+        return $"{Date.ToShortDateString()}Biking: Distance (km) = {Distance}, Speed (kph): {Speed}, Pace (min per km): {Pace}";
     }
 }
