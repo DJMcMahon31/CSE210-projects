@@ -30,7 +30,7 @@ class SwimmingActivity :Activity
     }
         public override string GetSummary()
     {
-        return $"{DateTime.Now.ToShortDateString()}Running ({Minutes} min): Distance (km): {GetDistance():0.00} km, Speed: {GetSpeed():0.00} kph, Pace: {GetPace():0.00} min/km";
+        return $"{DateTime.Now.ToShortDateString()}Swimming ({Minutes} min): Distance: {GetDistance():0.00} km, Speed: {GetSpeed():0.00} kph, Pace: {GetPace():0.00} min/km";
     }
 
 

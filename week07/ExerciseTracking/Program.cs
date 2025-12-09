@@ -21,11 +21,11 @@ class Program
         bike.Speed = 35;
         bike.Pace = 7;
 
-        Console.WriteLine($"{DateTime.Now.ToShortDateString()} Running (30 min) - Distance {run.GetDistance}, Speed {run.GetSpeed}, Pace: {run.GetPace}");
+        Console.WriteLine($"{DateTime.Now.ToShortDateString()} Running (30 min) - Distance {run.GetDistance()}, Speed {run.GetSpeed()}, Pace: {run.GetPace()}");
 
-        Console.WriteLine($"{DateTime.Now.ToShortDateString()} Swimming (30 min) - Distance {run.GetDistance}, Speed {run.GetSpeed}, Pace: {run.GetPace}");
+        Console.WriteLine($"{DateTime.Now.ToShortDateString()} Swimming (30 min) - Distance {run.GetDistance()}, Speed {run.GetSpeed()}, Pace: {run.GetPace()}");
 
-        Console.WriteLine($"{DateTime.Now.ToShortDateString()} Biking (30 min) - Distance {run.GetDistance}, Speed {run.GetSpeed}, Pace: {run.GetPace}");
+        Console.WriteLine($"{DateTime.Now.ToShortDateString()} Biking (30 min) - Distance {run.GetDistance()}, Speed {run.GetSpeed()}, Pace: {run.GetPace()}");
     }
 }
 
