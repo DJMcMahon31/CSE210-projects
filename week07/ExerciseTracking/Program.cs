@@ -23,9 +23,9 @@ class Program
 
         Console.WriteLine($"{DateTime.Now.ToShortDateString()} Running (30 min) - Distance {run.GetDistance()}, Speed {run.GetSpeed()}, Pace: {run.GetPace()}");
 
-        Console.WriteLine($"{DateTime.Now.ToShortDateString()} Swimming (30 min) - Distance {run.GetDistance()}, Speed {run.GetSpeed()}, Pace: {run.GetPace()}");
+        Console.WriteLine($"{DateTime.Now.ToShortDateString()} Swimming (30 min) - Distance {swim.GetDistance()}, Speed {swim.GetSpeed()}, Pace: {swim.GetPace()}");
 
-        Console.WriteLine($"{DateTime.Now.ToShortDateString()} Biking (30 min) - Distance {run.GetDistance()}, Speed {run.GetSpeed()}, Pace: {run.GetPace()}");
+        Console.WriteLine($"{DateTime.Now.ToShortDateString()} Biking (30 min) - Distance {bike.GetDistance()}, Speed {bike.GetSpeed()}, Pace: {bike.GetPace()}");
     }
 }
 

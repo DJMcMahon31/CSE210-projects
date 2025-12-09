@@ -3,14 +3,14 @@ using System.Dynamic;
 
 class BikingActivity : Activity
 {
-
+    private double _distance;
     public BikingActivity(double distance, int minutes)
        
     {
-        Distance = distance;
+        _distance = distance;
         Minutes = minutes;
     }
-    public override double GetDistance() => Distance;
+    public override double GetDistance() => _distance;
     public override double GetSpeed() => (GetDistance() / Minutes) * 60;
     public override double GetPace() => Minutes/GetDistance();
     public override string GetSummary()
